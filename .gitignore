@@ -1,0 +1,13 @@
+# Java
+*.class
+
+# Python
+__pycache__/
+*.py[cod]
+
+# macOS
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
