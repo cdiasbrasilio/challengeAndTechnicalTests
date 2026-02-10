@@ -1,0 +1,13 @@
+/* Importa as diretivas do Tailwind CSS para incluir os estilos base, componentes e utilitários */
+/* Reaproveita as cores personalizadas definidas no tailwind.config.js para garantir consistência visual */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset básico para garantir que a aplicação ocupe toda a altura da tela e remova margens/paddings padrão */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
