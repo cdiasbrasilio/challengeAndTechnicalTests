@@ -24,7 +24,7 @@ The project follows a modular component structure:
 
 1. Clone the repository:
     ```
-    xxxxxxx
+    https://github.com/cdiasbrasilio/challengeAndTechnicalTests/tree/main/technicalAssessments/webDevChallenge_UserManagementInterface
     ```
 2. Istalar as dependências:  
     ```
