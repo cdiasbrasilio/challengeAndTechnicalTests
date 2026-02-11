@@ -18,6 +18,7 @@ The project is organized into categories for easier navigation:
 | PROJECT          | STATUS          |
 |------------------|-----------------|
 | HTML analyzer    | ✅ Completed    |
+| Web Dev - UI/UX  | ✅ Completed    |
 
 ## 🧠 Engineering Philosophy ##
 
