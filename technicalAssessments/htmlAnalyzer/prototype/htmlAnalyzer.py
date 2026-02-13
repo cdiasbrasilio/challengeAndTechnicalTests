@@ -9,7 +9,7 @@ def analyze_html(url):
         req = urllib.request.Request(url, headers=headers)
         
         with urllib.request.urlopen(req) as response:
-            # Lendo e decodificando como UTF-8 conforme requisito técnico 6 [cite: 34]
+            # Lendo e decodificando como UTF-8 conforme requisito técnico 6
             content = response.read().decode('utf-8')
             lines = content.splitlines()
     except Exception:
