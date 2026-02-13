@@ -21,27 +21,27 @@ def analyze_html(url):
     deepest_text = None
     
     for line in lines:
-        line = line.strip() # Requisito: espaços de indentação devem ser ignorados [cite: 20]
+        line = line.strip() # Requisito: espaços de indentação devem ser ignorados
         
-        if not line: # Requisito: linhas em branco devem ser ignoradas [cite: 21]
+        if not line: # Requisito: linhas em branco devem ser ignoradas
             continue
             
-        # Caso A: Tag de fechamento (ex: </div>) [cite: 15]
+        # Caso A: Tag de fechamento (ex: </div>) 
         if line.startswith('</') and line.endswith('>'):
             tag_name = line[2:-1]
             if not stack or stack[-1] != tag_name:
                 return "malformed HTML" # Bônus: identificação de malformação 
             stack.pop()
             
-        # Caso B: Tag de abertura (ex: <div>) [cite: 14]
+        # Caso B: Tag de abertura (ex: <div>)
         elif line.startswith('<') and line.endswith('>'):
             tag_name = line[1:-1]
             stack.append(tag_name)
             
-        # Caso C: Trecho de texto [cite: 16]
+        # Caso C: Trecho de texto
         else:
             current_depth = len(stack)
-            # Regra: se houver empate, o primeiro deve ser retornado [cite: 10]
+            # Regra: se houver empate, o primeiro deve ser retornado
             if current_depth > max_depth:
                 max_depth = current_depth
                 deepest_text = line
@@ -58,5 +58,5 @@ if __name__ == "__main__":
         
     url_input = sys.argv[1]
     result = analyze_html(url_input)
-    if result: # Só imprime se houver resultado, conforme o padrão esperado [cite: 30]
+    if result: # Só imprime se houver resultado, conforme o padrão esperado
         print(result)
